@@ -1,9 +1,14 @@
-import React from 'react'
+import styles from './register.module.css'
+import RegisterForm from '@/components/registerForm/registerForm'
 
-const register = () => {
+const registerPage = () => {
   return (
-    <div>register</div>
+    <div className={styles.container}>
+    <div className={styles.wrapper}>
+     <RegisterForm/>
+      </div>
+    </div>
   )
 }
 
-export default register
+export default registerPage
