@@ -4,7 +4,7 @@ import styles from './adminUserForm.module.css'
 import { addUser } from '@/app/lib/action'
 import { useFormState } from 'react-dom'
 
-const adminUserForm=()=> {
+const AdminUserForm=()=> {
     const[state,formAction]= useFormState(addUser,undefined)
   return (
     <form action={formAction} className={styles.container}>
@@ -24,4 +24,4 @@ const adminUserForm=()=> {
   )
 }
 
-export default adminUserForm
+export default AdminUserForm

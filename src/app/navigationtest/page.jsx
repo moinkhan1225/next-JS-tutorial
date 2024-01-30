@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const navigationTest = () => {
+const NavigationTest = () => {
     const router = useRouter()
     function handleClick(){
         router.replace('/')
@@ -19,4 +19,4 @@ const navigationTest = () => {
   )
 }
 
-export default navigationTest
+export default NavigationTest

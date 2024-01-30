@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './navLink.module.css'
 import { usePathname } from 'next/navigation';
 
-const navLink = ({item}) => {
+const NavLink = ({item}) => {
     
     const pathName = usePathname();
   
@@ -13,4 +13,4 @@ const navLink = ({item}) => {
   )
 }
 
-export default navLink
+export default NavLink
