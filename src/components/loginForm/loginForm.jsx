@@ -1,7 +1,7 @@
 'use client'
 import { login, register } from "@/app/lib/action";
 import styles from "./loginForm.module.css";
-import { useFormState } from "react-hook-form";
+import { useFormState } from "react-dom";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
