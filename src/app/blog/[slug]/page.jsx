@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from './singlePost.module.css';
 import PostUser from '@/components/postUser/PostUser';
 import { getPost } from '@/app/lib/data';
-import { DELETE } from '@/app/api/blog/[slug]/route';
 
 //Fetch data with API
 const getData = async (slug) =>{

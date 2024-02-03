@@ -3,8 +3,6 @@ import Links from '@/components/navbar/links/Links.jsx';
 import Link from 'next/link';
 import styles from './navbar.module.css'
 import { auth } from '@/app/lib/auth';
-import { User } from '@/app/lib/models';
-import { getUser } from '@/app/lib/data';
 
 const Navbar = async() => {
   const session = await auth();

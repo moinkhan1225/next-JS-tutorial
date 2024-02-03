@@ -13,6 +13,7 @@ const loginPage = () => {
         <button className={styles.github}>
         <Image
                   src={'/github-logo.png'}
+                  alt={'Github Logo'}
                   height={30}
                   width={30}/>
                   Login with Github</button>
@@ -24,6 +25,7 @@ const loginPage = () => {
           <button className={styles.google}>
                   <Image
                   src={'/google-logo.png'}
+                  alt={'Google Logo'}
                   height={30}
                   width={30}/>
                   Login with Google
