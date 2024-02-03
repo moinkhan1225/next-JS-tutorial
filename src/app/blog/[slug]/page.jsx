@@ -22,7 +22,7 @@ return{
   description:post.desc,
 }
 }
-const singlePostPage = async({params}) => {
+const SinglePostPage = async({params}) => {
 
   const {slug} = params;
   // const post = await getData(slug);
@@ -61,4 +61,4 @@ const singlePostPage = async({params}) => {
   )
 }
 
-export default singlePostPage
+export default SinglePostPage

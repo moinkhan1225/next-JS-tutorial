@@ -13,7 +13,7 @@ import { getPosts } from '../lib/data'
 //   return res.json()
 // }
 
-const blog =  async () => {
+const Blog =  async () => {
   
   // const posts = await getData()
   const posts = await getPosts();
@@ -29,4 +29,4 @@ const blog =  async () => {
   )
 }
 
-export default blog
+export default Blog
