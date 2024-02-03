@@ -4,7 +4,7 @@ import styles from "./loginForm.module.css";
 import { useFormState } from "react-dom";
 import Link from "next/link";
 
-const loginForm = () => {
+const LoginForm = () => {
 
 const [state,formAction] = useFormState(login,undefined);
 
@@ -30,4 +30,4 @@ const [state,formAction] = useFormState(login,undefined);
   )
 }
 
-export default loginForm
+export default LoginForm
