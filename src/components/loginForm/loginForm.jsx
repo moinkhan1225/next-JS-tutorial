@@ -1,5 +1,4 @@
 'use client'
-
 import { login, register } from "@/app/lib/action";
 import styles from "./loginForm.module.css";
 import {useFormState} from 'react-dom';

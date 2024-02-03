@@ -12,9 +12,33 @@
     text-align: center;
     gap: 30px;
     border-radius: 5px;
+    
+}
+.socialButtons{
+    display: flex;
+    flex-direction: row;
 }
 .github{
     width:100%;
     padding: 20px;
     cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+.google{
+    background-color: rgb(52, 52, 196);
+    color:white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+    width:100%;
+    padding: 10px;
+    cursor: pointer;
+    gap:15px
 }

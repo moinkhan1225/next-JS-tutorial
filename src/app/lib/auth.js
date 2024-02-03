@@ -1,5 +1,6 @@
 import NextAuth from "next-auth"
-import GitHub from "next-auth/providers/github"
+import GitHub from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 import CredentialProvider from "next-auth/providers/credentials"
 import { connectDB } from "./utlis";
 import { User } from "./models";
@@ -24,10 +25,18 @@ const login = async(credentials)=>{
     }
 }
 
-export const { handlers:{GET,POST}, auth, signIn, signOut } = NextAuth({ ...authConfig,providers: [ GitHub({
+export const { handlers:{GET,POST}, auth, signIn, signOut } = NextAuth({ ...authConfig,providers: [ 
+
+    GitHub({
     clientId:process.env.GITHUB_ID,
     clientSecret:process.env.GITHUB_SECRET
 }),
+
+GoogleProvider({
+    clientId: process.env.GOOGLE_ID,
+    clientSecret: process.env.GOOGLE_SECRET,
+}),
+
 CredentialProvider({
     async authorize(credentials){
        try{
@@ -38,10 +47,27 @@ CredentialProvider({
        }
     }
 })
-], 
+],
+// ], providers: [
+//     GoogleProvider({
+//       clientId: process.env.GOOGLE_ID,
+//       clientSecret: process.env.GOOGLE_SECRET
+//     }),
+//     CredentialProvider({
+//         async authorize(credentials){
+//            try{
+//             const user = await login(credentials);
+//             return user;
+//            }catch(err){
+//             return null;
+//            }
+//         }
+//     })
+//   ],
 callbacks:{
     async signIn({user,account,profile}){
-        if(account.provider === "github"){
+        if(account.provider === "github" || account.provider === "google"){
+            console.log(account)
             connectDB();
             try{
             const user = await User.findOne({email:profile.email});

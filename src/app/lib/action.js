@@ -75,12 +75,21 @@ export const delUser = async(formData)=>{
 }
 
 export const handleGithubLogin = async() =>{
-    await signIn("github");
+    await signIn('github');
   };
 
-export const handleGithubLogOut = async() =>{
-    await signOut();
+export const handleGoogleLogin = async() =>{
+    await signIn('google');
   };
+
+  
+  export const handleGoogleLogOut = async() =>{
+      await signOut();
+    };
+    
+  export const handleGithubLogOut = async() =>{
+      await signOut();
+    };
 
 export const register = async(previousState,formData)=>{
     const {username,email,password,img,passwordRepeat} =Object.fromEntries(formData);

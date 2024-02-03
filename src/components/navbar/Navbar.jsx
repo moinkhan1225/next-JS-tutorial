@@ -16,7 +16,7 @@ const Navbar = async() => {
       <div className={styles.container}>
         <Link href='/' className={styles.logo}>
         {/* {session?.user?.email} */}
-        {session?.user?.username  ? `Hi ${session.user.username}`
+        {session?.user?.name  ? `Hi ${session.user.name}`
         : session?.user?.email? `Hi ${session.user.email.replace(/@.*$/, '')}`
         : "Welcome"}
         </Link>
