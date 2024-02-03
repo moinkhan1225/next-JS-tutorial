@@ -2,17 +2,17 @@ import React, { Suspense } from 'react';
 import Image from 'next/image';
 import styles from './singlePost.module.css';
 import PostUser from '@/components/postUser/PostUser';
-import { getPost } from '@/app/lib/data';
+import { getPost} from '@/app/lib/data';
 
 //Fetch data with API
-const getData = async (slug) =>{
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`)
+// const getData = async (slug) =>{
+//   const res = await fetch(`http://localhost:3000/api/blog/${slug}`)
 
-  if(!res.ok){
-    throw new Error("Something went wrong");
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error("Something went wrong");
+//   }
+//   return res.json()
+// }
 
 export const generateMetadata  = async({params})=>{
 const {slug} = params;
@@ -25,9 +25,9 @@ return{
 const singlePostPage = async({params}) => {
 
   const {slug} = params;
-  const post = await getData(slug);
+  // const post = await getData(slug);
   //Fetch data using API
-  // const post = await getPost(slug);
+  const post = await getPost(slug);
 
   console.log(post);
   return (
