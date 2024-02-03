@@ -23,7 +23,7 @@ const [state,formAction] = useFormState(login,undefined);
         <button>Login</button>
         {state?.error}
         <Link href='/register'>
-        Don't have account?<b> Register</b>
+        {`Don't have account?`}<b> Register</b>
         </Link>
       </form>
 
