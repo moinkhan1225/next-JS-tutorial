@@ -28,12 +28,7 @@ export const connectDB = async () => {
             return;
         }
 
-        const db = await mongoose.connect(process.env.MONGO, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            // useCreateIndex: true,
-            // useFindAndModify: false,
-        });
+        const db = await mongoose.connect(process.env.MONGO);
 
         connection.isConnected = db.connection.readyState;
 
