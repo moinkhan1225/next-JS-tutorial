@@ -86,7 +86,7 @@ export const handleGoogleLogin = async() =>{
   export const handleGoogleLogOut = async() =>{
       await signOut();
     };
-    
+
   export const handleGithubLogOut = async() =>{
       await signOut();
     };
