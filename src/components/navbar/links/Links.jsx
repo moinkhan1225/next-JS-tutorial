@@ -21,7 +21,8 @@ const links = [
     {
         title:"About",
         path:"/about",
-    }];
+    },
+    ];
     const Links = ({session}) => {
     const [open, setOpen] = useState(false)
 
@@ -55,7 +56,17 @@ const links = [
     
     {open && (<div className={styles.mobileLinks}>
         {links.map((link)=><NavLink item={link} key={link.title}/>
-            )}
+            )}{session?.user ? (
+                <>
+                        {session.user?.isAdmin && <NavLink item={{title:"Admin", path:"/admin"}}/>}
+                        <form action={handleGithubLogOut}>
+                        <button className={styles.logout}>Logout</button>
+                        </form>
+                        
+                </>
+                ):(
+                    <NavLink item={{title: "Login", path:"/login"}}/>
+                )}
     </div>)}
     </div>
   );

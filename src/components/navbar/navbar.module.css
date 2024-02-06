@@ -8,3 +8,19 @@ justify-content: space-between;
   font-size: 30px;
   font-weight: bold;
 }
+@media (max-width:640px){
+  .container{
+    bottom: 0;
+  }
+  .logo{
+    
+      font-size: 26px;
+      font-weight: bold;
+  }
+}
+@media (max-width:475px){
+  .logo{
+      font-size: 20px;
+      font-weight: bold;
+  }
+}
