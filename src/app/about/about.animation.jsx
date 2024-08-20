@@ -18,20 +18,16 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Year of experience",
-    value: "10000",
+    metric: "Posts",
+    value: "1000",
     postfix: "+",
   },
   {
-    metric: "NiggaChu",
-    value: "1",
-    postfix: "+",
-  },
-  {
-    metric: "Pikkachu",
+    metric: "Users",
     value: "10",
-    postfix: "~",
+    postfix: "+",
   },
+ 
 ];
 const aboutAnimation=()=>{
     return(

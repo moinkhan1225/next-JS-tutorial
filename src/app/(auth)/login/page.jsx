@@ -16,7 +16,7 @@ const loginPage = () => {
                   alt={'Github Logo'}
                   height={30}
                   width={30}/>
-                  Login with Github</button>
+                  Continue with Github</button>
         </div>
       </form>
       <form action={handleGoogleLogin}>
@@ -28,7 +28,7 @@ const loginPage = () => {
                   alt={'Google Logo'}
                   height={30}
                   width={30}/>
-                  Login with Google
+                  Continue with Google
          </button>
       </div>
         </form>
